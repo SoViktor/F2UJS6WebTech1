@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+
+
+    <head>
+
+        <meta charset="UTF-8">
+        <title>F2UJS6 Űrlap</title>
+
+        <style>
+            html, body {
+                font-family: Arial, sans-serif;
+                font-size: 16px;
+            }
+            *{
+                box-sizing: border-box;
+            }
+
+            section {
+                width: 50rem;
+                background-color:rgb(149, 132, 244);
+                text-align: center;
+
+                border-radius: 0.5rem;
+                box-shadow: inset 0 0 0.5rem #00000066, 0.25rem 0.25rem 0.5rem 0.25rem #000000aa;
+            }
+
+            header{
+                width: 50rem;
+
+                padding: 1rem;
+                text-align: center;
+                font-size: 2rem;
+                font-weight: bold;
+
+            }
+
+            footer{
+                width: 50rem;
+
+                margin-top: 2rem;
+
+                border-top: 0.1rem solid black;
+                padding: 1rem;
+                text-align: right;
+                font-size: 0.8rem;
+            }
+
+            label{
+                display: block;
+                width: 100%;
+                text-align: left;
+                gap: 1rem;
+                margin: 1rem;
+            }
+
+            .sidebyside{
+                width: 10rem;
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <header>HTML5-F2UJS6</header>
+
+        <section>
+            <form action="feldolgozo.php" target="_self" method="post" name="urlap" id="urlap">
+
+                <label for="nev">Név:
+                    <input type="text" id="nev" name="nev" required pattern="([A-ZÁÉÍÓÖŐÚÜŰ])(4,)" title="Írd be a neved" placeholder="Írd be a neved" autofocus autocomplete="off">
+                </label>
+
+
+                <label for="fav_fruit">
+                    Kedvenc gyümölcs:
+                    <input list="gyümölcsök" id="fav_fruit" name="fav_fruit" placeholder="" title="Alma, Körte, Szőlő, Banán, Narancs">
+                    <datalist id="gyümölcsök">
+                        <option value="alma"Alma></option>
+                        <option value="körte"Körte></option>
+                        <option value="szőlő"Szőlő></option>
+                        <option value="banán"Banán></option>
+                        <option value="narancs"Narancs></option>
+                    </datalist>
+                </label>
+
+                <label for="age">
+                    Életkor:
+                    <input type="number" id="age" name="age" 
+                </label>
+            
+                </form>
+        </section>
+        
+        PIN kód
+        Kedvenc gyümölcs
+        Életkor
+        Lábméret
+        Önbizalom
+
+        Elküld
+
+        Elküld ellenőrzé nélkül
+
+
+    </body>
+</html>

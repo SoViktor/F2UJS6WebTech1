@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+
+
+    <head>
+
+        <meta charset="UTF-8">
+        <title>Grid használata</title>
+
+        <style>
+
+            body {background-color: blueviolet;}
+            .wrapper {
+                display: grid;
+                grid-template-columns: 2fr 1fr 1fr;
+                grid-auto-rows: 100px;
+            }
+
+            *{
+                box-sizing: border-box;
+            }
+
+            .wrapper{
+                border: 2px solid red;
+                border-radius: 5px;
+                background-color: aliceblue;
+            }
+
+            .wrapper > div {
+                border: 2px solid orange;
+                border-radius: 5px;
+                background-color: antiquewhite;
+                padding: 1em;
+                color: brown;
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <h1>A gap tulajdonság több oszlopos elrendezésben</h1>
+
+        <p>Több oszlopos elrendezésben a <em>gap</em> tulajdonsággal adhatjuk meg a sorok és oszlopok közötti távolságot.</p>
+        <p>A több oszlopos elrendezésben az oszlopok között 50px a távolság</p>
+
+        <div id=".wrapper">
+            <div>A több oszlopos elrendezésben az oszlopok között 50px a távolság</div>
+            <div>A több oszlopos elrendezésben az oszlopok között 50px a távolság</div>
+            <div>A több oszlopos elrendezésben az oszlopok között 50px a távolság</div>
+            <div>A több oszlopos elrendezésben az oszlopok között 50px a távolság</div>
+            <div>A több oszlopos elrendezésben az oszlopok között 50px a távolság</div>
+            <div>A több oszlopos elrendezésben az oszlopok között 50px a távolság</div>
+            <div>A több oszlopos elrendezésben az oszlopok között 50px a távolság</div>
+            <div>A több oszlopos elrendezésben az oszlopok között 50px a távolság</div>
+        </div>
+
+    </body>
+</html>
