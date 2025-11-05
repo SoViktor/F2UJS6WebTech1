@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html>
+
+
+    <head>
+
+        <meta charset="UTF-8">
+        <title>Videó</title>
+
+        <style>
+
+            .grid {
+                margin-top: 2rem;
+                display: grid;
+                grid-template-columns: 1fr 2.5fr;
+                grid-template-rows: 1fr 1fr 1fr;
+                gap: 1rem;
+                width: 40rem;
+            }
+
+            *{
+                box-sizing: border-box;
+            }
+            
+            footer {
+                border-top:  4px solid gray;
+                padding-top: 2rem;
+                margin-top: 2rem;
+                width: 37.5rem;
+                text-align: right;
+            }
+
+            div.grid > div {
+                display: flex;
+                flex-direction: row;
+                gap: 1rem;
+            }
+
+            button {
+                width: 2.5rem;
+                height: 2.5rem;
+                line-height: 4;
+                overflow: hidden;
+
+                border: none;
+                border-radius: 0.5rem;
+                background-color: #bdf;
+                box-shadow: 0 0 0 0.125rem #000000bb, inset 0 0 0.25 0 #ffffffbb;
+            }
+
+            button:hover {
+                background-color: #9cf;
+            }
+
+        </style>
+
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    </head>
+    <body> 
+
+        <div style="text-align:center"> 
+        <button onclick="play()">Play</button>
+        <button onclick="pause()">Pause</button>
+        <button onclick="playPause()">Play/Pause</button> 
+        <button onclick="makeBig()">Big</button>
+        <button onclick="makeSmall()">Small</button>
+        <button onclick="makeNormal()">Normal</button>
+        <button onclick="mute()">Mute</button>
+        <button onclick="quite()">Quite</button>
+        <button onclick="loud()">Loud</button>
+        <button onclick="veryslow()">Very Slow</button>
+        <button onclick="slow()">Slow</button>
+        <button onclick="normalSpeed()">Normal Speed</button>
+        <button onclick="fast()">Fast</button>
+        <button onclick="veryfast()">Very Fast</button>
+        <button onclick="finished()">Finished</button>
+        <br><br>
+        <video id="video1" width="420" autoplay muted>
+            <source src="f2ujs6_video.mp4" type="video/mp4">
+        </video>
+        </div> 
+
+        <script> 
+        var myVideo = document.getElementById("video1"); 
+
+        function play() { 
+            myVideo.play(); 
+        }
+
+        function pause() { 
+            myVideo.pause(); 
+        }
+
+        function playPause() { 
+        if (myVideo.paused) 
+            myVideo.play(); 
+        else 
+            myVideo.pause(); 
+        } 
+
+        function makeBig() { 
+            myVideo.width = 560; 
+        } 
+
+        function makeSmall() { 
+            myVideo.width = 320; 
+        } 
+
+        function makeNormal() { 
+            myVideo.width = 420; 
+        } 
+
+        function mute() {
+            if (myVideo.muted) 
+                myVideo.muted = false;
+            else 
+                myVideo.muted = true;
+        }
+
+        function quite() {
+            myVideo.volume = myVideo.volume - 0.1;
+        }
+
+        function loud() {
+            myVideo.volume = myVideo.volume + 0.1;
+        }
+
+        function veryslow() {
+            myVideo.playbackRate = 0.25;
+        }
+
+        function slow() {
+            myVideo.playbackRate = 0.5;
+        }
+
+        function normalSpeed() {
+            myVideo.playbackRate = 1;
+        }
+
+        function fast() {
+            myVideo.playbackRate = 2;
+        }
+
+        function veryfast() {
+            myVideo.playbackRate = 4;
+        }
+
+        function finished() {
+            myVideo.currentTime = myVideo.duration;
+        }
+        </script> 
+
+        
+
+        <p>Video courtesy of <a href="https://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.</p>
+
+        </body> 
+</html>
