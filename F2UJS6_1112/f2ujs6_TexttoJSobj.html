@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <title>JSON Text konvertálása JavaScript objektummá</title>
+</head>
+<body>
+  <h2>JSON JavaScript objektum konvertálás</h2>
+
+  <button onclick="convertJSON()">Konvertálás</button>
+
+  <pre id="output"></pre>
+
+  <script>
+    function convertJSON() {
+    
+      const jsonText = `{
+        "nev": "No Name",
+        "iranyitoszam": "4004",
+        "varos": "Mucsaröcsöge",
+        "egyetem": "Szegedi Tudományegyetem"
+      }`;
+
+      
+      const jsObject = JSON.parse(jsonText);
+
+      
+      document.getElementById("output").textContent =
+        "Név: " + jsObject.nev + "\n" +
+        "Irányítószám: " + jsObject.iranyitoszam + "\n" +
+        "Város: " + jsObject.varos + "\n" +
+        "Egyetem: " + jsObject.egyetem;
+    }
+  </script>
+</body>
+</html>

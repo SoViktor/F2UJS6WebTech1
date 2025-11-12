@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <title>JSON String to JS Object</title>
+</head>
+<body>
+  <h2>JSON beolvasás és konvertálás</h2>
+  <button onclick="convertJSON()">JSON beolvasás</button>
+
+  <pre id="output"></pre>
+
+  <script>
+    function convertJSON() {
+      const jsonString = '{"nev": "HTML5", "kiterjesztes": ".html"}';
+
+    
+      const jsObject = JSON.parse(jsonString);
+
+    
+      document.getElementById("output").textContent =
+        "Név: " + jsObject.nev + "\n" +
+        "Kiterjesztés: " + jsObject.kiterjesztes;
+    }
+  </script>
+</body>
+</html>

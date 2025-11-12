@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <title>JS objektumot konvertálja JSON String</title>
+</head>
+<body>
+  <h2>JavaScript objektum konvertálása JSON String</h2>
+
+  <div id="output"></div>
+
+  <script>
+    const hallgato = {
+      "Egyetem": "Miskolci Egyetem",
+      "Város": "Miskolc",
+      "Irányítószám": "3515",
+      "Név": "Hallgató Neve"
+    };
+
+    const jsonString = JSON.stringify(hallgato);
+
+    document.getElementById("output").textContent = jsonString;
+  </script>
+</body>
+</html>

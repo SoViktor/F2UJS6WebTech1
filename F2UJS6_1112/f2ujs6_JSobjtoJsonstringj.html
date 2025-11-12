@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Object to JSON String</title>
+</head>
+<body>
+  <h2>JS objektum konvertálása JSON stringgé</h2>
+  <button onclick="convertToJSON()">Konvertálás JSON-é</button>
+
+  <pre id="output"></pre>
+
+  <script>
+    function convertToJSON() {
+    
+      const jsObject = {
+        nev: "JavaScript",
+        kiterjesztes: ".js",
+        tipus: "Programozási nyelv"
+      };
+
+      
+      const jsonString = JSON.stringify(jsObject, null, 2); 
+
+      
+      document.getElementById("output").textContent = jsonString;
+    }
+  </script>
+</body>
+</html>
