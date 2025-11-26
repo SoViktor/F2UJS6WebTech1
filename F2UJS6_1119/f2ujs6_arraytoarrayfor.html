@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Tömbökön belüli tömbök ciklusa</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1, h2 {
+            margin-bottom: 10px;
+        }
+        ul {
+            margin-bottom: 20px;
+        }
+    </style>
+
+</head>
+<body>
+
+<h1>Tömbökön belüli tömbök ciklusa</h1>
+
+<div id="content"></div>
+
+<script>
+let XYObj = {
+    "name": "XY",
+    "age": 22,
+    "cars": [
+        {"name": "Toyota", "models": ["CHR", "Corolla", "Proace"]},
+        {"name": "Ford", "models": ["Kuga", "Mondeo", "Mustang"]},
+        {"name": "BMW", "models": ["320", "X3", "X5"]},
+        {"name": "Fiat", "models": ["500", "Panda", "Tipo"]}
+    ]
+};
+
+let html = "";
+
+html += `<h2>Hallgató Neve (${XYObj.age})</h2>`;
+
+for (let i = 0; i < XYObj.cars.length; i++) {
+
+    html += `<h3>${XYObj.cars[i].name}:</h3>`;
+    html += "<ul>";
+
+    for (let j = 0; j < XYObj.cars[i].models.length; j++) {
+        html += `<li>${XYObj.cars[i].models[j]}</li>`;
+    }
+
+    html += "</ul>";
+}
+
+document.getElementById("content").innerHTML = html;
+
+</script>
+
+</body>
+</html>

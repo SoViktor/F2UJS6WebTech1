@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery feladat</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script src="6.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #calcForm {
+            border: 1px solid #ccc;
+            padding: 15px;
+            width: 220px;
+        }
+        input[type="text"] {
+            width: 120px;
+            margin-bottom: 10px;
+        }
+        #result {
+            font-weight: bold;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>jQuery feladat</h2>
+<p>Adjon meg két egész számot!</p>
+
+<form id="calcForm">
+
+    A = <input type="text" id="a"><br>
+    B = <input type="text" id="b"><br>
+
+    <input type="radio" name="op" value="mul"> A * B <br>
+    <input type="radio" name="op" value="div"> A / B <br>
+    <input type="radio" name="op" value="add"> A + B <br>
+    <input type="radio" name="op" value="sub"> A - B <br><br>
+
+    <button type="button" id="calcBtn">Számol</button>
+
+    <span>Eredmény:</span>
+    <span id="result"></span>
+
+</form>
+
+</body>
+</html>
