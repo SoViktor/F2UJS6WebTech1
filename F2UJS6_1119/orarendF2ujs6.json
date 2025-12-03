@@ -7,7 +7,10 @@
                     "nap":"Hétfő",
                     "tol":"8:00",
                     "ig":"9:30"
-                }
+                },
+                "helyszin":"A2 mfsz.2",
+                "oktato":"Dr. Hornyák Olivér",
+                "szak" : "3BP1"
             }
         ]
     }

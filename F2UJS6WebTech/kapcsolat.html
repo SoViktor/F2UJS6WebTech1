@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Another Love Kennel - Kapcsolat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .contact-wrapper {
+            border: 1px solid #e0d4c4;
+            border-radius: 8px;
+            padding: 1rem;
+            background-color: #fdf8f1;
+        }
+
+        .error-text {
+            color: #a62828;
+            font-size: 0.8rem;
+        }
+
+        #jsonPuppies {
+            margin-top: 1rem;
+            border-top: 1px dashed #c9b9a2;
+            padding-top: 0.8rem;
+        }
+
+        #jsonPuppies .json-dog {
+            margin-bottom: 0.4rem;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script src="script.js" defer></script>
+</head>
+<body class="breed-whippet">
+    <header>
+        <img src="kepek/fejlec_placeholder.jpg" alt="Another Love Kennel logó / fejléc">
+
+        <div>
+            <h1 style="text-transform: uppercase;">Another Love Kennel</h1>
+            <p>Whippet &amp; Ausztrál juhász tenyészet</p>
+        </div>
+
+        <div class="breed-switch-wrapper">
+            <span class="breed-switch-label">Whippet</span>
+
+            <label class="breed-toggle">
+                <input type="checkbox" id="breedSwitch">
+                <span class="slider"></span>
+            </label>
+
+            <span class="breed-switch-label">Aussie</span>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Főoldal</a></li>
+            <li><a href="eredmenyek.html">Eredményeink</a></li>
+            <li><a href="kiskutyak.html">Kiskutyáink</a></li>
+            <li><a href="rolunk.html">Rólunk</a></li>
+            <li><a href="kapcsolat.html" class="active">Kapcsolat</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <article>
+            <section>
+                <h2>Kapcsolatfelvétel</h2>
+                <p>
+                    Emailben és telefonon is elérsz minket, de az alábbi űrlap kitöltésével is bátran érdeklődhetsz kiskutyáink iránt.
+                </p>
+            </section>
+
+            <section class="contact-wrapper">
+                <h3>Érdeklődő űrlap</h3>
+
+                <form id="contactForm" novalidate>
+                    <div>
+                        <label for="name">Név *</label>
+                        <input type="text" id="name" name="name" placeholder="Teljes név">
+                        <div class="error-text" id="nameError"></div>
+                    </div>
+
+                    <div>
+                        <label for="email">E-mail cím *</label>
+                        <input type="email" id="email" name="email" placeholder="valami@example.com">
+                        <div class="error-text" id="emailError"></div>
+                    </div>
+
+                    <div>
+                        <label for="breedInput">Elsősorban melyik fajta érdekel? *</label>
+                        <input list="breedList" id="breedInput" name="breedInput" placeholder="Kezdj el gépelni.">
+                        <datalist id="breedList">
+                            <option value="Whippet">
+                            <option value="Ausztrál juhász">
+                            <option value="Mindkettő">
+                        </datalist>
+                        <div class="error-text" id="breedInputError"></div>
+                    </div>
+
+                    <div>
+                        <span><strong>Melyik almok iránt érdeklődsz?</strong></span><br>
+                        <label>
+                            <input type="checkbox" name="litterWhippet" id="litterWhippet">
+                            Whippet almok
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="litterAussie" id="litterAussie">
+                            Ausztrál juhász almok
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="litterBoth" id="litterBoth">
+                            Mindkét fajta érdekel
+                        </label>
+                        <div class="error-text" id="litterError"></div>
+                    </div>
+
+                    <div>
+                        <label for="experience">Volt már korábban kutyád?</label>
+                        <select id="experience" name="experience">
+                            <option value="">Válassz...</option>
+                            <option value="none">Még nem volt saját kutyám</option>
+                            <option value="pet">Családi / hobbi kutya</option>
+                            <option value="sport">Sport / munka kutya</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="message">Bemutatkozó üzenet *</label>
+                        <textarea id="message" name="message" rows="4"
+                            placeholder="Pár mondat rólad, családról, tervekről a kutyával..."></textarea>
+                        <div class="error-text" id="messageError"></div>
+                    </div>
+
+                    <div>
+                        <input type="submit" value="Küldés (demó)">
+                        <input type="reset" value="Űrlap törlése">
+                    </div>
+                </form>
+
+                <div id="jsonPuppies">
+                    <h4>Aktuálisan elérhető almok (JSON demó)</h4>
+                </div>
+            </section>
+        </article>
+
+        <aside>
+            <section>
+                <h3>Elérhetőségek</h3>
+                <p><strong>E-mail:</strong> email@example.com</p>
+                <p><strong>Telefon:</strong> 23456</p>
+                <p><strong>Helyszín:</strong> Sajóörös, Borsod-Abaúj-Zemplén megye</p>
+            </section>
+
+            <section>
+                <h3>Fontos számunkra</h3>
+                <ul>
+                    <li>Egészséges, szűrt tenyészállatok</li>
+                    <li>Stabil idegrendszer, jól kezelhető temperamentum</li>
+                    <li>Családi életre és sportra egyaránt alkalmas kutyák</li>
+                </ul>
+            </section>
+
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Another Love Kennel - Whippet &amp; Ausztrál juhász</p>
+    </footer>
+</body>
+</html>

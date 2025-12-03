@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Another Love Kennel – Rólunk</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .about-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .about-gallery img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script src="script.js" defer></script>
+</head>
+<body class="breed-whippet">
+    <header>
+        <img src="kepek/fejlec_placeholder.jpg" alt="Another Love Kennel logó / fejléc">
+
+        <div>
+            <h1 style="text-transform: uppercase;">Another Love Kennel</h1>
+            <p>Whippet &amp; Ausztrál juhász tenyészet</p>
+        </div>
+
+        <div class="breed-switch-wrapper">
+            <span class="breed-switch-label">Whippet</span>
+
+            <label class="breed-toggle">
+                <input type="checkbox" id="breedSwitch">
+                <span class="slider"></span>
+            </label>
+
+            <span class="breed-switch-label">Aussie</span>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Főoldal</a></li>
+            <li><a href="eredmenyek.html">Eredményeink</a></li>
+            <li><a href="kiskutyak.html">Kiskutyáink</a></li>
+            <li><a href="rolunk.html" class="active">Rólunk</a></li>
+            <li><a href="kapcsolat.html">Kapcsolat</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <article>
+            <section>
+                <h2>Rólunk</h2>
+                                <p>
+                    Kutyákkal nőttünk fel, számunkra mindig természetes volt, hogy a család részei: hű társak, akik mellett felnőttünk, és akikkel megosztottuk a mindennapok minden örömét.
+                </p>
+                <p>
+                    Gyerekkorunkban is mindig volt mellettünk négylábú barát, így nem csoda, hogy felnőttként is hiányzott ez a különleges kötődés.
+                </p>
+                <p>
+                    Évekkel ezelőtt rátaláltunk egy whippet-gazdi blogra, ahol az író olyan szeretettel és harmóniával élt együtt kutyáival, hogy ez mély nyomot hagyott bennünk. Akkor döntöttük el: egyszer mi is szeretnénk ilyen kapcsolatot megélni.
+                </p>
+                <p>
+                    Amikor végre kertes házba költöztünk, eljött a pillanat, hogy megkeressük azt a fajtát, amely az életmódunkhoz és a szívünkhöz is illik. Olyan kutyát szerettünk volna, aki kedves, szerethető, ragaszkodó, de nem igényel állandó pörgést; aki nem túl szőrös, aki képes alkalmazkodni, és ha szükséges, nyugodtan elvan egyedül is.
+                </p>
+                <p>
+                    Így találtunk rá a whippetekre és az ausztrál juhászokra - két különleges fajtára, amelyek bár különbözőek, egy közös bennük: mindkettővel meg lehet élni a feltétel nélküli szeretetet, a tiszteletet, és azt a különlegesen mély köteléket, amely bennünket a kutyák világához köt.
+                </p>
+                <p>
+                    
+                    Kennelünk célja egyszerű: szeretetteljes, harmonikus környezetben nevelni egészséges, kiegyensúlyozott, emberközpontú kutyákat, akik új családjuknak is ugyanannyi örömöt adnak majd, amennyit nekünk adnak nap mint nap.
+                </p>
+            </section>
+
+            <section>
+                <h3>Tenyészcéljaink</h3>
+                <p>
+                    Célunk az hogy a kutyáink egy szeretetteljes családi környezetben nőjenek fel és később családtagok legyenek leendő gazdáiknál.
+                </p>
+                <p>
+                    Emellett fontos számunkra a fajták egészségének, temperamentumának és képességeinek megőrzése is.
+                </p>
+
+                <ul>
+                    <li>Családtaggá válás</li>
+                    <li>Egészségmegőrzés</li>
+                    <li>Fajta standardok betartása</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Kennelünk pillanatai</h3>
+                <p>
+                    Pár csendéleti kép előző almokról.
+                </p>
+
+                <div class="about-gallery">
+                    <img src="kepek/csapat1.jpg" alt="Kennel kép 1">
+                    <img src="kepek/csapat2.jpg" alt="Kennel kép 2">
+                    <img src="kepek/csapat3.jpg" alt="Kennel kép 3">
+                    <img src="kepek/csapat4.jpg" alt="Kennel kép 4">
+                </div>
+            </section>
+
+            <section class="breed-content whippet">
+                <h3>Miért szeretjük a Whippetet?</h3>
+                <p>
+                    Egy sportos de könnyen elfáradó családi kutya, aki imádja a simogatást és a közös időtöltést.
+                </p>
+            </section>
+
+            <section class="breed-content aussie">
+                <h3>Miért szeretjük az Ausztrál juhászt</h3>
+                <p>
+                    Egy rendkívül inteligens pörgős kutya, aki imádja a kihívásokat és a közös munkát a gazdival.
+                </p>
+            </section>
+        </article>
+
+        <aside>
+
+            <section>
+                <h3>Fontos számunkra</h3>
+                <ul>
+                    <li>Egészséges, szűrt tenyészállatok</li>
+                    <li>Stabil idegrendszer, jól kezelhető temperamentum</li>
+                    <li>Családi életre és sportra egyaránt alkalmas kutyák</li>
+                </ul>
+            </section>
+
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Another Love Kennel - Whippet &amp; Ausztrál juhász</p>
+    </footer>
+</body>
+</html>

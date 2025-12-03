@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Another Love Kennel - Főoldal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        main > article > section:first-of-type {
+            margin-bottom: 1.5rem;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script src="script.js" defer></script>
+</head>
+<body class="breed-whippet">
+    <header>
+        <img src="kepek/fejlec_placeholder.jpg" alt="Another Love Kennel logó / fejléc">
+
+        <div>
+            <h1 style="text-transform: uppercase;">Another Love Kennel</h1>
+            <p>Whippet &amp; Ausztrál juhász tenyészet</p>
+        </div>
+
+        <div class="breed-switch-wrapper">
+            <span class="breed-switch-label">Whippet</span>
+
+            <label class="breed-toggle">
+                <input type="checkbox" id="breedSwitch">
+                <span class="slider"></span>
+            </label>
+
+            <span class="breed-switch-label">Aussie</span>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Főoldal</a></li>
+            <li><a href="eredmenyek.html">Eredményeink</a></li>
+            <li><a href="kiskutyak.html">Kiskutyáink</a></li>
+            <li><a href="rolunk.html">Rólunk</a></li>
+            <li><a href="kapcsolat.html">Kapcsolat</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <article>
+            <section>
+                <h2>Üdvözlünk az Another Love Kennelnél!</h2>
+                <p>
+                    Kutyákkal nőttünk fel, számunkra mindig természetes volt, hogy a család részei: hű társak, akik mellett felnőttünk, és akikkel megosztottuk a mindennapok minden örömét.
+                </p>
+                <p>
+                    Gyerekkorunkban is mindig volt mellettünk négylábú barát, így nem csoda, hogy felnőttként is hiányzott ez a különleges kötődés.
+                </p>
+                <p>
+                    Évekkel ezelőtt rátaláltunk egy whippet-gazdi blogra, ahol az író olyan szeretettel és harmóniával élt együtt kutyáival, hogy ez mély nyomot hagyott bennünk. Akkor döntöttük el: egyszer mi is szeretnénk ilyen kapcsolatot megélni.
+                </p>
+                <p>
+                    Amikor végre kertes házba költöztünk, eljött a pillanat, hogy megkeressük azt a fajtát, amely az életmódunkhoz és a szívünkhöz is illik. Olyan kutyát szerettünk volna, aki kedves, szerethető, ragaszkodó, de nem igényel állandó pörgést; aki nem túl szőrös, aki képes alkalmazkodni, és ha szükséges, nyugodtan elvan egyedül is.
+                </p>
+                <p>
+                    Így találtunk rá a whippetekre és az ausztrál juhászokra - két különleges fajtára, amelyek bár különbözőek, egy közös bennük: mindkettővel meg lehet élni a feltétel nélküli szeretetet, a tiszteletet, és azt a különlegesen mély köteléket, amely bennünket a kutyák világához köt.
+                </p>
+                <p>
+                    
+Kennelünk célja egyszerű: szeretetteljes, harmonikus környezetben nevelni egészséges, kiegyensúlyozott, emberközpontú kutyákat, akik új családjuknak is ugyanannyi örömöt adnak majd, amennyit nekünk adnak nap mint nap.
+                </p>
+            </section>
+
+            <section>
+                <h2>Fajtáink</h2>
+
+                <div class="breed-content whippet">
+                    <h3>Whippet</h3>
+                    <p>
+                        A whippet, más néven kis angol agár, egy elegáns és sportos kutyafajta, amelynek jellemzői a gyorsaság, a barátságos természet és a viszonylag kis gondozási igény.
+                    </p>
+                    <p>
+                        <span class="breed-highlight">Whippet előnyök:</span>
+                    </p>
+                    <ol>
+                        <li>Szelíd és barátságos</li>
+                        <li>Fáradékony, pihenésre vágyó</li>
+                        <li>Sportos</li>
+                    </ol>
+                </div>
+
+                <div class="breed-content aussie">
+                    <h3>Ausztrál juhász</h3>
+                    <p>
+                        Természete mozgékony és értelmes. Fontos azokon a területeken, ahol létfontosságú az engedelmesség, így a mentési munkákban.
+                    </p>
+                    <p>
+                        <span class="breed-highlight">Aussie előnyök:</span>
+                    </p>
+                    <ol>
+                        <li>Inteligens és tanulékony</li>
+                        <li>Szeretet gombóc</li>
+                        <li>Sokoldalú</li>
+                    </ol>
+                </div>
+            </section>
+
+            <section>
+                <h2>Kennel videók</h2>
+                <p>
+                    Nézd meg, milyen hangulatúak a whippet és az aussie bulik nálunk. 
+                    A fenti fajta-váltóval tudsz váltani a videók között.
+                </p>
+
+                <div class="video-box breed-content whippet">
+                    <video id="videoWhippet" autoplay muted playsinline loop>
+                        <source src="kepek/video/Whippetbuli.mp4" type="video/mp4">
+                        A böngésződ nem támogatja a HTML5 videót.
+                    </video>
+                    <div class="video-controls">
+                        <button class="playBtn">⏯ Lejátszás / megállítás</button>
+                        <button class="muteBtn">🔇 Hang be/ki</button>
+                        <label>
+                            Hangerő:
+                            <input type="range" min="0" max="1" step="0.05" value="0.5" class="volumeSlider">
+                        </label>
+                    </div>
+                </div>
+
+                <div class="video-box breed-content aussie">
+                    <video id="videoAussie" autoplay muted playsinline loop>
+                        <source src="kepek/video/Aussiebuli.mp4" type="video/mp4">
+                        A böngésződ nem támogatja a HTML5 videót.
+                    </video>
+                    <div class="video-controls">
+                        <button class="playBtn">⏯ Lejátszás / megállítás</button>
+                        <button class="muteBtn">🔇 Hang be/ki</button>
+                        <label>
+                            Hangerő:
+                            <input type="range" min="0" max="1" step="0.05" value="0.5" class="volumeSlider">
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Hogyan zajlik a kölyökfoglalás?</h2>
+                <ol>
+                    <li>ELSŐ LÉPÉS: kapcsolatfelvétel, bemutatkozás stb.</li>
+                    <li>MÁSODIK LÉPÉS: várólista / szerződés</li>
+                    <li>HARMADIK LÉPÉS: kölykök kiválasztása stb.</li>
+                    <li>NEGYEDIK LÉPÉS: hazavitel feltételei</li>
+                </ol>
+            </section>
+        </article>
+
+        <aside>
+            <section>
+                <h3>Gyors információk</h3>
+                <p><strong>Helyszín:</strong> Sajóörös, Borsod-Abaúj-Zemplén megye</p>
+                <p><strong>Fajták:</strong> Whippet, Ausztrál juhász</p>
+                <p><strong>Elérhetőség:</strong> [E-MAIL / TELEFON]</p>
+            </section>
+
+            <section>
+                <h3>Következő tervezett almok</h3>
+                <p>Télen várhatóak új whippet almok.</p>
+            </section>
+
+            <section>
+                <h3>Hasznos linkek</h3>
+                <ul>
+                    <li><a href="[MEOESZ_LINK]" target="https://www.kennelclub.hu/">MEOESZ</a></li>
+                    <li><a href="[FCI_LINK]" target="https://www.fci.be/en/">FCI</a></li>
+                    <li><a href="[FACEBOOK_OLDAL_LINK]" target="https://www.facebook.com/profile.php?id=100093344755640&locale=hu_HU">Kennel Facebook oldala</a></li>
+                </ul>
+            </section>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Another Love Kennel - Whippet &amp; Ausztrál juhász</p>
+    </footer>
+</body>
+</html>
