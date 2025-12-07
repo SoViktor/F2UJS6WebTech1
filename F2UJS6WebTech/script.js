@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initContactForm();
     initJsonPuppies();
     initVideoControls();
+    initResultsJson();
 });
 
 function initBreedSwitch() {
@@ -269,5 +270,56 @@ function initJsonPuppies() {
             .addClass("json-dog")
             .text(`${dog.name} – ${dog.breed} (${dog.litter}) – státusz: ${dog.status}`);
         $container.append($row);
+    });
+}
+
+function initResultsJson() {
+    const whippetBody = $("#whippetShowBody");
+    const aussieShowBody = $("#aussieShowBody");
+    const aussieSportBody = $("#aussieSportBody");
+
+    if (!whippetBody.length && !aussieShowBody.length && !aussieSportBody.length) {
+        return;
+    }
+
+    $.getJSON("eredmenyek.json", function (data) {
+        if (whippetBody.length && Array.isArray(data.whippet_show)) {
+            data.whippet_show.forEach(item => {
+                whippetBody.append(`
+                    <tr>
+                        <td>${item.name}</td>
+                        <td>${item.title}</td>
+                        <td>${item.show}</td>
+                        <td>${item.date}</td>
+                    </tr>
+                `);
+            });
+        }
+        if (aussieShowBody.length && Array.isArray(data.aussie_show)) {
+            data.aussie_show.forEach(item => {
+                aussieShowBody.append(`
+                    <tr>
+                        <td>${item.name}</td>
+                        <td>${item.title}</td>
+                        <td>${item.show}</td>
+                        <td>${item.date}</td>
+                    </tr>
+                `);
+            });
+        }
+        if (aussieSportBody.length && Array.isArray(data.aussie_sport)) {
+            data.aussie_sport.forEach(item => {
+                aussieSportBody.append(`
+                    <tr>
+                        <td>${item.name}</td>
+                        <td>${item.discipline}</td>
+                        <td>${item.event}</td>
+                        <td>${item.date}</td>
+                    </tr>
+                `);
+            });
+        }
+    }).fail(() => {
+        console.error("Hiba a eredmenyek.json betöltésekor.");
     });
 }

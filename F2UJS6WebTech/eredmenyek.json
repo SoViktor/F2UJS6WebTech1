@@ -1,0 +1,70 @@
+{
+  "whippet_show": [
+    {
+      "name": "Sineterra Panthera, Panti",
+      "title": "2024 Top Agár, 2 helyezett whippet szuka",
+      "show": "Egész éves eredmény",
+      "date": "2024"
+    },
+    {
+      "name": "Another Love Dior",
+      "title": "2024 Év fiatal győztese whippet szuka",
+      "show": "Egész éves eredmény",
+      "date": "2024"
+    },
+    {
+      "name": "Serena - Kangaroo of Hungarian Diamonds",
+      "title": "CACIB and Best Opposite Sex",
+      "show": "Jakabszállás IDS",
+      "date": "2025"
+    },
+    {
+      "name": "Serena - Kangaroo of Hungarian Diamonds",
+      "title": "Best Baby, Baby BEST IN SHOW",
+      "show": "Agár Klub's Speciality Shows",
+      "date": "2024"
+    },
+    {
+      "name": "Serena - Kangaroo of Hungarian Diamonds",
+      "title": "HPJ, Best Junior, BOB",
+      "show": "Herend IDS",
+      "date": "2024"
+    },
+    {
+      "name": "Barnesmore Winter Rose",
+      "title": "CAC",
+      "show": "2024 Greyhound club dog show",
+      "date": "2024"
+    },
+    {
+      "name": "Sineterra Panthera",
+      "title": "CAC, BOB",
+      "show": "2024 Greyhound club dog show",
+      "date": "2024"
+    },
+    {
+      "name": "Another Love Dior",
+      "title": "CAC, Best Junior,  Junior BIS: 3. place",
+      "show": "2024 Greyhound club dog show",
+      "date": "2024"
+    }
+  ],
+
+  "aussie_show": [
+    {
+      "name": "Orion",
+      "title": "CAC",
+      "show": "kiállítás",
+      "date": "2024"
+    }
+  ],
+
+  "aussie_sport": [
+    {
+      "name": "Chloe",
+      "discipline": "Dog Dancing",
+      "event": "Budapest",
+      "date": "2024"
+    }
+  ]
+}
